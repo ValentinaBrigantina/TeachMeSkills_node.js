@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "i": "^0.3.7",
+    "npm": "^8.5.5",
+    "sharp": "^0.30.3"
+  },
+  "name": "resizer",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "devDependencies": {},
+  "scripts": {
+    "install": "cp .env.local .env"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValentinaBrigantina/TeachMeSkills_node.js/issues"
+  },
+  "homepage": "https://github.com/ValentinaBrigantina/TeachMeSkills_node.js#readme",
+  "description": ""
+}
