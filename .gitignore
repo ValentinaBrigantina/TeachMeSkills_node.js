@@ -1,0 +1,6 @@
+.idea/
+.vscode
+.env
+node_modules/
+file_example_MP4_480_1_5MG.mp4
+output/
