@@ -1,0 +1,2 @@
+- install node.js v14+
+- `npm run install`
