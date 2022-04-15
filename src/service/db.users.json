@@ -1,0 +1,18 @@
+[
+    {
+        "id": "92862ac0-ddac-49f3-b4c0-64dad3778513",
+        "name": "vasya",
+        "login": "vasd",
+        "age": 32,
+        "password": "$2b$10$lqircVIUa56n/56Lyl1Znek/m2nCE/JvKRfZ7tru4a.l0WkWr3pNy",
+        "roles": ["USER", "SUPERADMIN"]
+    },
+    {
+        "id": "36348dde-1a32-462a-96d8-c59296cc54fb",
+        "name": "valera",
+        "login": "val",
+        "age": 32,
+        "password": "$2b$10$Nj146afq8B92UUuDPwA7muSGrQoFDSnVw0W.FaMt5qThFpDsKIwxa",
+        "roles": ["USER", "SUPERADMIN"]
+    }
+]
