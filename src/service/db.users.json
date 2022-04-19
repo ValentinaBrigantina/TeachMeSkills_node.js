@@ -5,7 +5,10 @@
         "login": "vasd",
         "age": 32,
         "password": "$2b$10$lqircVIUa56n/56Lyl1Znek/m2nCE/JvKRfZ7tru4a.l0WkWr3pNy",
-        "roles": ["USER", "SUPERADMIN"]
+        "roles": [
+            "USER",
+            "SUPERADMIN"
+        ]
     },
     {
         "id": "36348dde-1a32-462a-96d8-c59296cc54fb",
@@ -13,6 +16,20 @@
         "login": "val",
         "age": 32,
         "password": "$2b$10$Nj146afq8B92UUuDPwA7muSGrQoFDSnVw0W.FaMt5qThFpDsKIwxa",
-        "roles": ["USER", "SUPERADMIN"]
+        "roles": [
+            "SUPERADMIN"
+        ]
+    },
+    {
+        "id": "f9d82b91-cddb-4dc3-a04e-84ed0ea03d49",
+        "login": "51",
+        "password": "$2b$10$Nj146afq8B92UUuDPwA7muy/MDtyhaWS7RkTAPDhOJ4NWusLQCVB6",
+        "name": "lala",
+        "age": 9,
+        "roles": [
+            "USER",
+            "ADMIN",
+            "SUPERADMIN"
+        ]
     }
 ]

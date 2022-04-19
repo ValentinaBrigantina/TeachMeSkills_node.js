@@ -4,7 +4,7 @@ const { decrypt } = require('./json-encryption')
 exports.checkAuth = (req) => {
     const { authorization } = req.headers
     if (!authorization) {
-        throw new HttpError('Forbidden.', 403)
+        throw new HttpError('Not auhrorized.', 401)
     }
     try {
         req.user = decrypt(authorization)

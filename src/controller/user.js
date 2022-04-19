@@ -11,7 +11,7 @@ exports.getAllUsers = async () => {
 };
 
 exports.addNewUser = async (req, res) => {
-  const newUserBody = await parseJsonBody(req);
+  const newUserBody = await parseJsonBody(req)
 
   validateBodyCredentials(newUserBody, res)
 
@@ -39,8 +39,7 @@ exports.addNewUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
   const newUserBody = await parseJsonBody(req);
   validateBodyCredentials(newUserBody, res)
-
-  // Найти пользователя с данными логином.
+  
   const user = await modelUser.findUserByLogin(newUserBody.login)
   if (!user) {
     res.writeHead(404)
@@ -72,7 +71,7 @@ exports.getUserById = async (id, res) => {
   return await modelUser.getUserByIdModel(id, getAllPets);
 };
 
-exports.updateUser = async (req) => {
+exports.updateUser = async (req, res) => {
   const updateUserData = await parseJsonBody(req);
   await modelUser.updateUserModel(updateUserData);
   return updateUserData;

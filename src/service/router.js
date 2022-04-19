@@ -33,10 +33,14 @@ router.on("GET", "/pets", identification(async (req, res, params) => {
   res.end(JSON.stringify(result));
 }));
 
-router.on("PUT", "/user", async (req, res, params) => {
-  const result = await controllerUser.updateUser(req);
-  res.end(JSON.stringify(result));
-});
+router.on("PUT", "/user", routerMiddleware([
+    checkAuth,
+    checkRole('SUPERADMIN'),
+    async (req, res, params) => {
+      const result = await controllerUser.updateUser(req, res);
+      res.end(JSON.stringify(result));
+  }
+]));
 
 router.on("DELETE", "/user", identification(async (req, res, params) => {
   const result = await controllerUser.deleteUser(req);
