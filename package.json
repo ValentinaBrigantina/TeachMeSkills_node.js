@@ -2,17 +2,22 @@
   "name": "home_work_38",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/app.js",
+  "main": "backend/app.mjs",
   "scripts": {
-    "dev": "nodemon ./backend/app.js"
+    "dev": "nodemon ./backend/app.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^16.11.27",
+    "bcrypt": "^5.0.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
     "find-my-way": "^5.5.0",
-    "serve-static": "^1.15.0"
+    "formidable": "^2.0.1",
+    "serve-static": "^1.15.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

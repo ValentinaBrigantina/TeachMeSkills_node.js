@@ -1,9 +1,11 @@
-const http = require('http')
-const serveStatic = require('serve-static')
-const path = require('path')
-const router = require('./src/router')
+// require('dotenv').()
+import 'dotenv/config'
+import http from 'http'
+import serveStatic from 'serve-static'
+import path from 'path'
+import router from './src/services/router.mjs'
 
-const frontendPath = path.resolve(__dirname, '../frontend/')
+const frontendPath = path.resolve(process.cwd(), 'frontend')
 const serve = serveStatic(frontendPath, {
     index: ['index.html']
 })

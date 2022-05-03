@@ -4,14 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/main.css">
+    <title>homeWork</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <script src="./index.js"></script>
+  <div class="container">
+    <div class="form">
+      <h5>Sign up</h5>
+      <div class="row">
+        <form class="col s10">
+          <div class="row">
+            <div class="input-field col s10">
+              <input id="name" type="text" class="validate">
+              <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s10">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button id="submit_signup" class="waves-effect waves-light btn-small bt">Sign up</button>
+    </div>
+    <div class="form">
+      <h5>Log in</h5>
+      <div class="row">
+        <form class="col s10">
+          <div class="row">
+            <div class="input-field col s10">
+              <input id="name2" type="text" class="validate">
+              <label for="name2">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s10">
+              <input id="password2" type="password" class="validate">
+              <label for="password2">Password</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button id="submit_login" class="waves-effect waves-light btn-small bt">Log in</button>
+    </div>
+  </div>
+  
+  <div class="slider">
+    <ul class="slides"></ul>
+  </div>
 
-    <h1>Hello world!</h1>
-    <div id="root"></div>
-    <img class="image" src="images/cat.jpg" />
+  <div class="container">
+    <form class="form-upload" action="/image/upload" enctype="multipart/form-data" method="POST">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" name="multipleFiles" multiple="multiple">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload one or more files">
+        </div>
+      </div>
+      <input type="submit" value="Upload" class="waves-effect waves-light btn send-image"></input>
+    </form>
+  </div>
+  
+            
+  <script src="./js/index.js"></script>   
+  <script type="text/javascript" src="./js/materialize.js"></script>
+      
 </body>
 </html>
