@@ -1,6 +1,8 @@
 import { createReadStream, createWriteStream } from 'fs'
 import path from'path'
 import * as petModel from '../model/pet.mjs'
+import fs from 'fs/promises'
+import formidable from 'formidable'
 
 const getNotFoundResponse = (res) => {
     res.writeHead(404)
@@ -20,7 +22,13 @@ export const getPets = async () => {
     return pets
 }
 
-export const uploadPet = async (req, res) => {
-    const pet = await petModel.upload()
-    
-}
+export const createPet = (req, res) => new Promise((resolve, reject) => {
+    const form = petModel.upload()
+    form.parse(req, async (err) => {
+        if (err) {
+            reject(err)
+        }
+        const success = await fs.readFile('./frontend/success.html')
+        resolve(success.toString())
+    })
+})

@@ -1,4 +1,3 @@
-// require('dotenv').()
 import 'dotenv/config'
 import http from 'http'
 import serveStatic from 'serve-static'

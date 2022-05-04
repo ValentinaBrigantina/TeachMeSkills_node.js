@@ -1,9 +1,6 @@
 import { createReadStream, writeFile } from 'fs'
 import path from 'path'
-import http from 'http'
-import fs from 'fs/promises'
 import formidable from 'formidable'
-// import { nanoid } from 'nanoid'
 
 const dbJsonPath = path.resolve(process.cwd(), 'backend/src/services/db_pets.json')
 
@@ -30,5 +27,6 @@ export const upload = () => {
         uploadDir: `${process.cwd()}/frontend/images`,
         multiples: true,
         filename: ($, _, {originalFilename}) => `${Math.random().toString(16).slice(10)}${originalFilename}`,
-      });
+      })
+      return form
 }

@@ -25,13 +25,12 @@ router.on('POST', '/user/login', async (req, res) => {
   res.end(JSON.stringify(result))
 })
 
-router.on('POST', '/image/upload', (req, res) => {
+router.on('POST', '/image/upload', async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
   res.setHeader('Access-Control-Allow-Origin', '*')
-  const result = petController.uploadPet(req, res)
-  res.end(JSON.stringify({
-    code: 200
-  }))
+  res.setHeader('Content-Type', 'text/html')
+  const result = await petController.createPet(req, res)
+  res.end(result)
 })
 
 export default router
