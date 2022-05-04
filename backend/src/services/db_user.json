@@ -1,37 +1,12 @@
 [
     {
-        "id": "a8ed8e8a-98da-4988-a33b-d3a7cc9cdec5",
-        "name": "q",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muOJndzQGgVFxGjah6e5V0.lvQyAx1Onq"
+        "id": "67f0e809-3f7b-45f4-b580-1579f2b1778b",
+        "name": "z",
+        "password": "$2b$10$Nj146afq8B92UUuDPwA7mutOOHbPpIEd9iyqVHJo0S1hWvvrGAyaq"
     },
     {
-        "id": "6b86b26a-0686-49c6-801a-f31d9ad25d23",
-        "name": "r",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muwdEC1CP63DbVHqj/D3wffWTa1pK5D9q"
-    },
-    {
-        "id": "4b1dff13-60f0-482c-ae39-9857e40e25d8",
-        "name": "f",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7mumctBfr43cFeFNXDlNKIUqB2f.D4Jr7q"
-    },
-    {
-        "id": "65ca6bc9-9b17-4565-ae17-b19d831551e3",
-        "name": "c",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7mu0xL4wdoz.h69p6xGsSq8hcoobOWjxHy"
-    },
-    {
-        "id": "14fed25c-4bf4-4e3c-94e7-6a4ba3059d1b",
-        "name": "n",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muyaQECDQFb.oLmTFgPlzFIGcMLI2xELy"
-    },
-    {
-        "id": "01e29813-0361-446b-8a13-0b90885244da",
-        "name": "j",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muDrneIwOXWdblGWzX8dIH/PNi0LG9g4e"
-    },
-    {
-        "id": "284f7f27-ea4b-4455-a5bb-a4d3faca65e8",
-        "name": "b",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muMZgo2wRvxYXvUQN//.rpE8qNylVBiXi"
+        "id": "180c4c4e-f2b6-43df-97e8-f280ad2c50cf",
+        "name": "asd",
+        "password": "$2b$10$Nj146afq8B92UUuDPwA7muqUxzwMxgzBkDd309X3PIq26WkYd7c/G"
     }
 ]

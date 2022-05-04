@@ -8,9 +8,10 @@ const createSlide = (path, name) => {
         </li>
     `
 }
+const url = 'http://localhost:3000'
 
 const onloadHandler = async () => {
-    const response = await fetch('http://localhost:3000/pet')
+    const response = await fetch(`${url}/pet`)
     const pets = await (response.ok ? response.json() : [])
     const slider = document.querySelector('.slides')
 
@@ -28,16 +29,16 @@ const onloadHandler = async () => {
     )
 
     let userData = {}
-    document.getElementById('name').addEventListener('input', (event) => {
+    name_user.addEventListener('input', (event) => {
         userData.name = event.target.value
     })
     
-    document.getElementById('password').addEventListener('input', (event) => {
+    password.addEventListener('input', (event) => {
         userData.password = event.target.value
     })
     
-    document.getElementById('submit_signup').addEventListener('click', async (event) => {
-        const response = await fetch('http://localhost:3000/user', {
+    submit_signup.addEventListener('click', async () => {
+        const response = await fetch(`${url}/user`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -45,21 +46,21 @@ const onloadHandler = async () => {
             body: JSON.stringify(userData)
         })
         userData = {}
-        document.getElementById('name').value = ''
-        document.getElementById('password').value = ''
+        name_user.value = ''
+        password.value = ''
     })
 
     let userDataLogin = {}
-    document.getElementById('name2').addEventListener('input', (event) => {
+    name_user2.addEventListener('input', (event) => {
         userDataLogin.name = event.target.value
     })
     
-    document.getElementById('password2').addEventListener('input', (event) => {
+    password2.addEventListener('input', (event) => {
         userDataLogin.password = event.target.value
     })
     
-    document.getElementById('submit_login').addEventListener('click', async (event) => {
-        const response = await fetch('http://localhost:3000/user/login', {
+    submit_login.addEventListener('click', async () => {
+        const response = await fetch(`${url}/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
@@ -68,9 +69,9 @@ const onloadHandler = async () => {
         })
         let token = await response.json()
         localStorage.setItem('token', JSON.stringify(token.token))
-        userData = {}
-        document.getElementById('name2').value = ''
-        document.getElementById('password2').value = ''
+        userDataLogin = {}
+        name_user2.value = ''
+        password2.value = ''
     })
 }
 

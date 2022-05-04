@@ -4,6 +4,14 @@ import * as userController from '../controller/user.mjs'
 
 const router = createRoute()
 
+router.on('OPTIONS', '/*', async (req, res) => {
+  res.setHeader('Content-Type', 'application/json')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', '*')
+  res.end()
+})
+
 router.on('GET', '/pet', async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -29,7 +37,7 @@ router.on('POST', '/image/upload', async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Content-Type', 'text/html')
-  const result = await petController.createPet(req, res)
+  const result = await petController.uploadPet(req, res)
   res.end(result)
 })
 

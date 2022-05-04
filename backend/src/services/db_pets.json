@@ -1,22 +1,28 @@
 [
     {
         "name": "Loli",
-        "image": "images/cat.jpg"
+        "image": "images/cat.jpg",
+        "id": "0f2848bd-c59d-41d4-8797-814f0bbbed0b"
     },
     {
         "name": "Poli",
-        "image": "images/cat2.jpg"
+        "image": "images/cat2.jpg",
+        "id": "4f2848bd-c59d-41d4-8797-814f0bbbed0b"
     },
     {
         "name": "Doli",
-        "image": "images/kitten_slideshow.jpg"
+        "image": "images/kitten_slideshow.jpg",
+        "id": "7f2848bd-c59d-41d4-8797-814f0bbbed0b"
     },
     {
         "name": "Moli",
-        "image": "images/kitten.jpg"
+        "image": "images/kitten.jpg",
+        "id": "9f2848bd-c59d-41d4-8797-814f0bbbed0b"
     },
     {
         "name": "Holi",
-        "image": "images/orange-white-kitten.jpg"
+        "image": "images/orange-white-kitten.jpg",
+        "id": "2f2848bd-c59d-41d4-8797-814f0bbbed0b"
     }
 ]
+   

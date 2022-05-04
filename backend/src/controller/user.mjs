@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid"
 import bcrypt from 'bcrypt'
 import { encryptionKeys } from '../utils/constants.mjs'
 import { encrypt } from '../utils/encryptor.mjs'
+import parseJsonBody from '../utils/parseJsonBody.mjs'
 
 const createId = () => uuidv4()
 
@@ -17,27 +18,6 @@ const validateBodyCredentials = (body, res, status = 400) => {
       }
     }
   }
-
-const parseJsonBody = request => new Promise((resolve, reject) => {
-    let rawJson = ''
-    request
-        .on('data', (cunck) => {
-            rawJson += cunck
-        })
-        .on('end', () => {
-            try {
-                if(rawJson) {
-                    const requestBody =JSON.parse(rawJson)
-                    resolve(requestBody)
-                } else {
-                    resolve(null)
-                }
-            } catch (err) {
-                reject(err)
-            }
-        })
-        .on('error', reject)
-})
 
 const createPasswordHash = (password) => new Promise((resolve, reject) => {
     bcrypt.hash(password, encryptionKeys.passwordSalt, (err, hash) => {
@@ -71,8 +51,10 @@ export const addNewUser = async (req, res) => {
         }
       }
     }
+
+    const {password, ...returnUser} = user
   
-    return user
+    return returnUser
 }
 
 export const loginUser = async (req, res) => {

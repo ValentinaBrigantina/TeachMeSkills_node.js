@@ -20,6 +20,13 @@ const readJSONAsync = (path) => new Promise((resolve) => {
         })
 })
 
+const writeJSONAsync = (path, data) => new Promise((resolve, reject) => {
+    const buff = Buffer.from(JSON.stringify(data, null, 4))
+    writeFile(path, buff, (err) => {
+        err ? reject(err) : resolve()
+    })
+})
+
 export const fetchAllPets = () => readJSONAsync(dbJsonPath)
 
 export const upload = () => {
@@ -29,4 +36,10 @@ export const upload = () => {
         filename: ($, _, {originalFilename}) => `${Math.random().toString(16).slice(10)}${originalFilename}`,
       })
       return form
+}
+
+export const addNewPet = async (data) => {
+    const pets = await readJSONAsync(dbJsonPath)
+    pets.push(data)
+    await writeJSONAsync(dbJsonPath, pets)
 }
