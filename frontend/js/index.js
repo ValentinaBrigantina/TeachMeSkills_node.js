@@ -28,6 +28,10 @@ const onloadHandler = async () => {
         }
     )
 
+   
+    var elems = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(elems);
+
     let userData = {}
     name_user.addEventListener('input', (event) => {
         userData.name = event.target.value
@@ -48,6 +52,9 @@ const onloadHandler = async () => {
         userData = {}
         name_user.value = ''
         password.value = ''
+        document.querySelector('.signUp').classList.remove("active")
+        document.querySelector('.collapsible-body1').style.display = ""
+        
     })
 
     let userDataLogin = {}
@@ -72,6 +79,27 @@ const onloadHandler = async () => {
         userDataLogin = {}
         name_user2.value = ''
         password2.value = ''
+        document.querySelector('.signIn').classList.remove("active")
+        document.querySelector('.collapsible-body2').style.display = ""
+        createSlide()
+    })
+
+    addImage.addEventListener('click', async () => {
+        if (!localStorage.token) {
+            alert('Need to login')
+        }
+        else {
+            addImage.style.display = 'none'
+            const containerUpload = document.querySelector('.containerUpload')
+            containerUpload.style.display = 'block'
+        }
+    })
+
+    upload.addEventListener('click', async (e) => {
+        if (!nameImage.value) {
+            e.preventDefault()
+            alert('Picture not added')
+        }
     })
 }
 

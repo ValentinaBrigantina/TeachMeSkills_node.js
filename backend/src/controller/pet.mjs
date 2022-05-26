@@ -28,9 +28,10 @@ export const uploadPet = (req, res) => new Promise((resolve, reject) => {
     form.parse(req, async (err, { petName }, { multipleFiles }) => {
         const petData = {
             "name": petName,
-            "image": multipleFiles.newFilename,
+            "image": `images/${multipleFiles.newFilename}`,
             "id": uuid()
         }
+        if (multipleFiles.size === 0) return
         if (err) {
             return reject(err)
         }

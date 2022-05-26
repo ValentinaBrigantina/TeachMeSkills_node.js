@@ -11,73 +11,100 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <div class="container">
-    <div class="form">
-      <h5>Sign up</h5>
-      <div class="row">
-        <form class="col s10">
-          <div class="row">
-            <div class="input-field col s10">
-              <input id="name_user" type="text" class="validate">
-              <label for="name_user">Name</label>
+
+  <div class="main">
+    <ul class="collapsible popout">
+      <li class="signUp">
+        <div class="collapsible-header teal-text">Sign up</div>
+        <div class="collapsible-body collapsible-body1">
+          <div class="form">
+            <h5>Sign up</h5>
+            <div class="row">
+              <form class="col s10">
+                <div class="row">
+                  <div class="input-field col s10">
+                    <input id="name_user" type="text" class="validate">
+                    <label for="name_user">Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s10">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+              </form>
             </div>
+            <button id="submit_signup" class="waves-effect waves-light btn-small bt">Sign up</button>
           </div>
-          <div class="row">
-            <div class="input-field col s10">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
+        </div>
+      </li>
+      <li class="signIn">
+        <div class="collapsible-header teal-text">Sign in</div>
+        <div class="collapsible-body collapsible-body2">
+          <div class="form">
+            <h5>Sign in</h5>
+            <div class="row">
+              <form class="col s10">
+                <div class="row">
+                  <div class="input-field col s10">
+                    <input id="name_user2" type="text" class="validate">
+                    <label for="name_user2">Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s10">
+                    <input id="password2" type="password" class="validate">
+                    <label for="password2">Password</label>
+                  </div>
+                </div>
+              </form>
             </div>
+            <button id="submit_login" class="waves-effect waves-light btn-small bt">Sign in</button>
           </div>
-        </form>
-      </div>
-      <button id="submit_signup" class="waves-effect waves-light btn-small bt">Sign up</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="slider">
+      <ul class="slides"></ul>
     </div>
-    <div class="form">
-      <h5>Log in</h5>
-      <div class="row">
-        <form class="col s10">
-          <div class="row">
-            <div class="input-field col s10">
-              <input id="name_user2" type="text" class="validate">
-              <label for="name_user2">Name</label>
+
+    <button id="addImage" class="waves-effect waves-light btn-large bt">Add image</button>
+
+    <div class="containerUpload">
+      <div class="form">
+        <div class="row">
+          <form class="col s10 form-upload" action="/image/upload" enctype="multipart/form-data" method="POST">
+            <div class="row">
+              <div class="input-field col s10">
+                <input id="name_pets" type="text" name="petName" class="validate">
+                <label for="name_pets">Name pets</label>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s10">
-              <input id="password2" type="password" class="validate">
-              <label for="password2">Password</label>
+            <div class="row">
+              <div class="input-field file-field col s10">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file" name="multipleFiles" multiple="multiple">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" id="nameImage" placeholder="Upload one or more files">
+                </div>
+              </div>
             </div>
-          </div>
-        </form>
+            <input type="submit" value="Upload" id="upload" class="waves-effect waves-light btn send-image"></input>
+          </form>
+        </div>
       </div>
-      <button id="submit_login" class="waves-effect waves-light btn-small bt">Log in</button>
     </div>
-  </div>
-  
-  <div class="slider">
-    <ul class="slides"></ul>
+
+    <div class="signOut">
+      <button id="signOut" class="waves-effect teal-text white waves-light btn-small bt">Sign out</button>
+    </div>
+
   </div>
 
-  <div class="container">
-    <form class="form-upload" action="/image/upload" enctype="multipart/form-data" method="POST">
-      <div class="input-field col">
-        <input id="name_pets" type="text" name="petName" class="validate">
-        <label for="name_pets">Name pets</label>
-      </div>
-      <div class="file-field input-field">
-        <div class="btn">
-          <span>File</span>
-          <input type="file" name="multipleFiles" multiple="multiple">
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text" id="name_image" placeholder="Upload one or more files">
-        </div>
-      </div>
-      <input type="submit" value="Upload" id="upload" class="waves-effect waves-light btn send-image"></input>
-    </form>
-  </div>
-  
-            
   <script src="/js/index.js"></script>   
   <script type="text/javascript" src="/js/materialize.js"></script>
       

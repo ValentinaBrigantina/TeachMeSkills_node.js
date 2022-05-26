@@ -7,7 +7,6 @@ const parseJsonBody = request => new Promise((resolve, reject) => {
         .on('end', () => {
             try {
                 if(rawJson) {
-                    console.log(rawJson)
                     const requestBody =JSON.parse(rawJson)
                     resolve(requestBody)
                 } else {
