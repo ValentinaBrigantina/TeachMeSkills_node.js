@@ -22,6 +22,12 @@ const onloadHandler = async () => {
         slider.insertAdjacentHTML('beforeend', slide)
     })
 
+    M.Sidenav.init(
+        document.querySelector('.sidenav'), {
+
+        }
+    )
+
     M.Slider.init(
         document.querySelectorAll('.slider'), {
             interval: 20000
@@ -100,6 +106,10 @@ const onloadHandler = async () => {
             e.preventDefault()
             alert('Picture not added')
         }
+    })
+
+    signOut.addEventListener('click', async () => {
+       localStorage.removeItem('token')
     })
 }
 

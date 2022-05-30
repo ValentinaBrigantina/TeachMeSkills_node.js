@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <div class="main">
+  <ul id="slide-out" class="sidenav">
     <ul class="collapsible popout">
       <li class="signUp">
         <div class="collapsible-header teal-text">Sign up</div>
@@ -65,7 +65,13 @@
         </div>
       </li>
     </ul>
+    <button id="signOut" class="waves-effect teal-text white waves-light btn-small bt">Sign out</button>
 
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="medium material-icons">menu</i></a>
+
+  <div class="main">
+    
     <div class="slider">
       <ul class="slides"></ul>
     </div>
@@ -97,10 +103,6 @@
           </form>
         </div>
       </div>
-    </div>
-
-    <div class="signOut">
-      <button id="signOut" class="waves-effect teal-text white waves-light btn-small bt">Sign out</button>
     </div>
 
   </div>
