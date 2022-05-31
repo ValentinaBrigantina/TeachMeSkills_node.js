@@ -4,7 +4,8 @@
   "description": "",
   "main": "backend/app.mjs",
   "scripts": {
-    "dev": "nodemon ./backend/app.mjs"
+    "dev": "nodemon ./backend/app.mjs",
+    "start:prod": "PORT=80 nodemon ./backend/app.mjs"
   },
   "keywords": [],
   "author": "",

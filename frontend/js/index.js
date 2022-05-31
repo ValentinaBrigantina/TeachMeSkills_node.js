@@ -8,7 +8,9 @@ const createSlide = (path, name) => {
         </li>
     `
 }
-const url = 'http://localhost:3000'
+
+const port = process.env.PORT || 3000
+const url = `http://localhost:${port}`
 
 const onloadHandler = async () => {
     const response = await fetch(`${url}/pet`)
