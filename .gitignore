@@ -1,2 +1,5 @@
 node_modules/
 .idea/
+frontend/images/*
+!frontend/images/.gitkeep
+errors-0.log
