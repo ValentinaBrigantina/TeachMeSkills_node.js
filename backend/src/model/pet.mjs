@@ -1,6 +1,7 @@
 import { createReadStream, writeFile } from 'fs'
 import path from 'path'
 import formidable from 'formidable'
+import { v4 as uuid } from 'uuid'
 
 const dbJsonPath = path.resolve(process.cwd(), 'backend/src/services/db_pets.json')
 
@@ -33,8 +34,10 @@ export const upload = () => {
     const form = formidable({
         uploadDir: `${process.cwd()}/frontend/images`,
         multiples: true,
-        filename: ($, _, {originalFilename}) => `${Math.random().toString(16).slice(10)}${originalFilename}`,
+        keepExtensions: true,
+        filename: (name, ext, {originalFilename}) => `${uuid()}${ext}`,
       })
+      console.log(form.filename);
       return form
 }
 
