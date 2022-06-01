@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "be-server",
+      "script": "./backend/app.mjs",
+      "instances": "max",
+      "exec_mode": "cluster",
+      "error_file": "errors.log"
+    }
+  ]
+}
