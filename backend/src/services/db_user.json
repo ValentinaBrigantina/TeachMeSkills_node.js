@@ -28,5 +28,10 @@
         "id": "822b5051-7d11-43c5-acfc-187ead8f4deb",
         "name": "valera",
         "password": "$2b$10$Nj146afq8B92UUuDPwA7mug747yIW0ilQ64UltHJhnYqha8Aq0Mea"
+    },
+    {
+        "id": "578c1dc2-f12a-4475-b4df-5e5f8ee6f985",
+        "name": "f",
+        "password": "$2b$10$Nj146afq8B92UUuDPwA7mumctBfr43cFeFNXDlNKIUqB2f.D4Jr7q"
     }
 ]
