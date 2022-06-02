@@ -1,43 +1,7 @@
 [
     {
-        "id": "e7ab8251-912b-4d20-99ab-bd259f282fd0",
-        "name": "v",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7mudds2.wEk44g60oDcCUagJb2e0nHJmie"
-    },
-    {
-        "id": "818e22dc-c58d-48e6-9531-25c5d9841c1f",
-        "name": "e",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muSLV8Df.DOqv/MA683up1iQB5vjgXXsO"
-    },
-    {
-        "id": "396bcdb7-8aa3-462b-a1f7-02ef50c93c3d",
-        "name": "d",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muRlBwlUMiLtnZ6mQmEH/KbV/ItIH6ine"
-    },
-    {
-        "id": "cb4b8c12-7088-4e74-9812-5c5dfecae37f",
-        "name": "b",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muMZgo2wRvxYXvUQN//.rpE8qNylVBiXi"
-    },
-    {
-        "id": "16957a3f-2e7a-4c63-bdb9-f2f1a80d1062",
-        "name": "y",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7mukkYcI4wNUwfPczxulw1.mGVWxP/79r6"
-    },
-    {
         "id": "822b5051-7d11-43c5-acfc-187ead8f4deb",
         "name": "valera",
         "password": "$2b$10$Nj146afq8B92UUuDPwA7mug747yIW0ilQ64UltHJhnYqha8Aq0Mea"
-    },
-    {
-<<<<<<< HEAD
-        "id": "578c1dc2-f12a-4475-b4df-5e5f8ee6f985",
-        "name": "f",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7mumctBfr43cFeFNXDlNKIUqB2f.D4Jr7q"
-=======
-        "id": "043e7fb4-6696-4659-b3d6-f247a2139f8e",
-        "name": "j",
-        "password": "$2b$10$Nj146afq8B92UUuDPwA7muDrneIwOXWdblGWzX8dIH/PNi0LG9g4e"
->>>>>>> ec7b120fd83c25a09381843b8f834c32fcdb2938
     }
 ]
