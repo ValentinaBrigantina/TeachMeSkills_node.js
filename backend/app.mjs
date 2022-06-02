@@ -4,8 +4,8 @@ import serveStatic from 'serve-static'
 import path from 'path'
 import router from './src/services/router.mjs'
 
-// const port = process.env.PORT || 4000
-const port = 4000
+const port = process.env.PORT || 4000
+// const port = 4000
 
 const frontendPath = path.resolve(process.cwd(), 'frontend')
 const serve = serveStatic(frontendPath, {
